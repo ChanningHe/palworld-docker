@@ -4,7 +4,12 @@ on:
   push:
     tags:
       - "*"
-
+  workflow_dispatch:
+    inputs:
+      desc:
+        description: "desc"
+        required: false
+  
 jobs:
   docker:
     runs-on: ubuntu-latest
